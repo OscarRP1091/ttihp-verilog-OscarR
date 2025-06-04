@@ -7,14 +7,16 @@ module tt_um_OscarRP1091 (
     output wire [7:0] uio_oe
 );
 
-    wire [4:0] sw_credito = ui_in[7:3];
-    wire avance = ui_in[2];
-    wire [2:0] estado = ui_in[2:0];
+    // Mapear bits sin solapamiento
+    wire [3:0] sw_credito = ui_in[7:4];  // 4 bits crédito
+    wire avance = ui_in[3];               // avance separado
+    wire [2:0] estado = ui_in[2:0];      // estado bits bajos
 
     wire credito;
     wire [3:0] estado_actual;
     wire [6:0] seg;
 
+    // Instanciar módulos
     Credito credito_inst (
         .sw_credito(sw_credito),
         .hay_credito(credito)
@@ -32,8 +34,15 @@ module tt_um_OscarRP1091 (
         .seg(seg)
     );
 
+    // Salidas
     assign uo_out[0] = credito;
     assign uo_out[7:1] = seg[6:0];
+
+    assign uio_out = 8'b0;
+    assign uio_oe  = 8'b0;
+
+endmodule
+
 
     assign uio_out = 8'b0;
     assign uio_oe  = 8'b0;
