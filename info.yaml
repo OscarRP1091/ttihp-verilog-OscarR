@@ -1,46 +1,40 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  title:        "Crédito y Control de Estado"
+  author:       "OscarRP1091"
+  discord:      ""
+  description:  "Sistema de crédito y control con display 7 segmentos para Tiny Tapeout"
+  language:     "Verilog"
+  clock_hz:     0
+  tiles:        "1x1"
+  top_module:   "tt_um_OscarRP1091"
 
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
-
-  # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
-
-  # List your project's source files here.
-  # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
-    - "project.v"
+    - "credito.v"
+    - "control_estado.v"
+    - "display7seg.v"
+    - "tt_um_OscarRP1091.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
-# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "Estado bit 0"
+  ui[1]: "Estado bit 1"
+  ui[2]: "Estado bit 2"
+  ui[3]: "Avance"
+  ui[4]: "Crédito bit 0"
+  ui[5]: "Crédito bit 1"
+  ui[6]: "Crédito bit 2"
+  ui[7]: "Crédito bit 3"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "Crédito válido (LED)"
+  uo[1]: "Segmento A"
+  uo[2]: "Segmento B"
+  uo[3]: "Segmento C"
+  uo[4]: "Segmento D"
+  uo[5]: "Segmento E"
+  uo[6]: "Segmento F"
+  uo[7]: "Segmento G"
 
   # Bidirectional pins
   uio[0]: ""
@@ -54,3 +48,4 @@ pinout:
 
 # Do not change!
 yaml_version: 6
+
