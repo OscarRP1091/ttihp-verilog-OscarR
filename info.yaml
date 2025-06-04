@@ -1,40 +1,42 @@
 # Tiny Tapeout project information
 project:
-  title:        "Crédito y Control de Estado"
-  author:       "OscarRP1091"
-  discord:      ""
-  description:  "Sistema de crédito y control con display 7 segmentos para Tiny Tapeout"
+  title:        "Control de Estado con Crédito y Display 7 Seg"  # Nombre descriptivo del proyecto
+  author:       "OscarRP1091"                                    # Tu nombre o nombre de usuario
+  discord:      "OscarRP1091#1234"                               # Opcional: tu usuario de Discord
+  description:  "Control de estado con entrada de crédito y salida a display de 7 segmentos"
   language:     "Verilog"
   clock_hz:     0
-  tiles:        "1x1"
-  top_module:   "tt_um_OscarRP1091"
+
+  tiles: "1x1"
+
+  top_module:  "tt_um_OscarRP1091"
 
   source_files:
-    - "credito.v"
-    - "control_estado.v"
-    - "display7seg.v"
     - "tt_um_OscarRP1091.v"
+    - "Credito.v"
+    - "ControlEstado.v"
+    - "Display7Seg.v"
 
 pinout:
   # Inputs
-  ui[0]: "Estado bit 0"
-  ui[1]: "Estado bit 1"
-  ui[2]: "Estado bit 2"
-  ui[3]: "Avance"
-  ui[4]: "Crédito bit 0"
-  ui[5]: "Crédito bit 1"
-  ui[6]: "Crédito bit 2"
-  ui[7]: "Crédito bit 3"
+  ui[0]: "estado[0]"
+  ui[1]: "estado[1]"
+  ui[2]: "estado[2]"
+  ui[3]: "avance"
+  ui[4]: "sw_credito[0]"
+  ui[5]: "sw_credito[1]"
+  ui[6]: "sw_credito[2]"
+  ui[7]: "sw_credito[3]"
 
   # Outputs
-  uo[0]: "Crédito válido (LED)"
-  uo[1]: "Segmento A"
-  uo[2]: "Segmento B"
-  uo[3]: "Segmento C"
-  uo[4]: "Segmento D"
-  uo[5]: "Segmento E"
-  uo[6]: "Segmento F"
-  uo[7]: "Segmento G"
+  uo[0]: "hay_credito"
+  uo[1]: "seg[0]"
+  uo[2]: "seg[1]"
+  uo[3]: "seg[2]"
+  uo[4]: "seg[3]"
+  uo[5]: "seg[4]"
+  uo[6]: "seg[5]"
+  uo[7]: "seg[6]"
 
   # Bidirectional pins
   uio[0]: ""
@@ -46,6 +48,5 @@ pinout:
   uio[6]: ""
   uio[7]: ""
 
-# Do not change!
 yaml_version: 6
 
