@@ -13,9 +13,9 @@ project:
 
   source_files:
     - "tt_um_OscarRP1091.v"
-    - "Credito.v"
-    - "ControlEstado.v"
-    - "Display7Seg.v"
+    - "credito.v"
+    - "control_estado.v"
+    - "displayde7seg.v"
 
 pinout:
   # Inputs
