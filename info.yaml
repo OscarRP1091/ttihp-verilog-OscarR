@@ -1,8 +1,8 @@
 # Tiny Tapeout project information
 project:
-  title:        "Control de Estado con Crédito y Display 7 Seg"  # Nombre descriptivo del proyecto
-  author:       "OscarRP1091"                                    # Tu nombre o nombre de usuario
-  discord:      "OscarRP1091#1234"                               # Opcional: tu usuario de Discord
+  title:        "Control de Estado con Crédito y Display 7 Seg"  # 
+  author:       "OscarRP1091"                                    # 
+  discord:      ""                               #
   description:  "Control de estado con entrada de crédito y salida a display de 7 segmentos"
   language:     "Verilog"
   clock_hz:     0
